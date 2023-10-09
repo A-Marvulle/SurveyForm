@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Formulário</h1>
+        <p id="description" class="description text-center">
+          Pesquisa de genêros literarios
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Nome</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Digite seu nome"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Digite seu E-mail"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="idade-label" for="idade"
+            >Idade<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="idade"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Idade"
+          />
+        </div>
+        <div class="form-group">
+          <p>Qual das opçoes melhor descreve o seu perfil atual?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Escolha</option>
+            <option value="Estudante">Estudante</option>
+            <option value="CLT">CLT</option>
+            <option value="Universitario">Universitario</option>
+            <option value="prefereNao">Prefiro não dizer</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Autoriza o uso dos dados preenchidos acima?</p>
+          <label>
+            <input
+              name="user-autorizacao"
+              value="sim"
+              type="radio"
+              class="input-radio"
+              checked
+            />Sim</label
+          >
+          <label>
+            <input
+              name="user-autorizacao"
+              value="nao"
+              type="radio"
+              class="input-radio"
+            />Não</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>
+           Quais os seus genêros literarios favoritos?
+            <span class="clue">(Marque todos que quiser)</span>
+          </p>
+
+          <label
+            ><input
+              name="prefer"
+              value="acao-e-aventura"
+              type="checkbox"
+              class="input-checkbox"
+            />Ação e aventura</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="classicos"
+              type="checkbox"
+              class="input-checkbox"
+            />Clássicos</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="ficcao"
+              type="checkbox"
+              class="input-checkbox"
+            />Ficção</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="hq"
+              type="checkbox"
+              class="input-checkbox"
+            />Quadrinhos</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="outros"
+              type="checkbox"
+              class="input-checkbox"
+            />Outros</label
+          >
+
+        </div>
+
+        <div class="form-group">
+          <p>Algum comentario ou sugestão?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Digite aqui..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
